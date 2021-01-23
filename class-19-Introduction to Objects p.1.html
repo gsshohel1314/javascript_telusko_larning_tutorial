@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+        var Car=//car is an object
+        {   
+            car_name  : "audi",      //this are the attribuate
+            car_model : "model x3",  //this are the attribuate
+            car_price :  500000,     //this are the attribuate
+            car_color : "black",     //this are the attribuate
+
+            autoPilot : function(){
+                //return "This car has auto pilot"; //jodi object er bahire print kori tahole akane return korte hobe.
+                document.write("<h1>This car has auto pilot</h1>");//r jodi akane print kori tahole nice sudhu object dara method ta ke call korte hobe. 
+            }
+        }
+        Car.autoPilot();//method calling.
+
+        document.write("<h1>"+Car.car_color+"</h1>");
+        //document.write("<h1>"+Car.autoPilot()+"</h1>");
+    */
+
+    function Cars(car_name,car_model,car_price)//this is constructor function ja dara amra onek gula object create korte pari.
+    {
+        this.car_name=car_name,
+        this.car_model=car_model,
+        this.car_price=car_price,
+
+        this.autoPilot=function(){
+            document.write("<h1>This car has auto pilot</h1>");
+        }
+
+    }
+
+    var c1=new Cars("audi","model x3",50000);
+    c1.autoPilot();
+    var c2=new Cars("bmw","model 1",32000);
+    c2.autoPilot();
+    document.write("<h1>"+c2.car_name+"</h1>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

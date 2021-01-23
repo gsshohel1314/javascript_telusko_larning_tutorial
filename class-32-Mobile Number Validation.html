@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        // \d - match any digit (equal to [0-9])
+        // \w - match any word character (a-z, A-Z, 0-9, _)
+        // \S - match whitespace character (e.g. - spaces & tabs)
+        // \t - match a tab only
+        //  ^ - er mane holo start.orthat 01 diyei start korte hobe onno konio word ba number bosbena samne.
+        //  $ - er mane holo end. orthat jekane $ sign dibo sekhane thekei ses er pore r kono kicu bosbe na.
+        function validate(){
+            var text=document.getElementById("phn1").value;
+            //rex=new RegExp(/01[3-9]\d{8}/);
+            var rex=/^01[3-9]\d{8}$/;
+
+            if(rex.test(text)){
+                //alert("valid");
+                document.getElementById("lab1").innerHTML="Valid phone number";
+                document.getElementById("lab1").style.visibility="visible";
+                document.getElementById("lab1").style.color="green";
+            }else{
+                //alert("invalid");
+                document.getElementById("lab1").innerHTML="Invalid phone number";
+                document.getElementById("lab1").style.visibility="visible";
+                document.getElementById("lab1").style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input  id="phn1" type="text" placeholder="Phone"><br>
+        <label id="lab1" style="color: red; visibility:hidden;">Invalid</label>
+        <br><br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>

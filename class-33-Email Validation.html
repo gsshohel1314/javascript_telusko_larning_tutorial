@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function validate(){
+            var text=document.getElementById("mail").value;
+            //regx=new RegExp("/^$/");
+            var regx=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})(.[a-z]{2,10})?$/;
+
+            if(regx.test(text)){
+                document.getElementById("lab1").innerHTML="Valid email";
+                document.getElementById("lab1").style.visibility="visible";
+                document.getElementById("lab1").style.color="green";
+            }else{
+                document.getElementById("lab1").innerHTML="Invalid email";
+                document.getElementById("lab1").style.visibility="visible";
+                document.getElementById("lab1").style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="email" placeholder="Email" id="mail"><br>
+        <label id="lab1" style="color: red; visibility:hidden;">Invalid</label><br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>

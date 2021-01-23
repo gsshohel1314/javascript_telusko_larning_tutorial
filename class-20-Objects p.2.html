@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        //booleans,numbes and strings can be object when it defined with new keyword.like__
+        var str=new String();
+        typeof(str);
+        document.write("<h1>"+typeof(str)+"</h1>");
+        
+        var bool=new Boolean();
+        typeof(bool);
+        document.write("<h1>"+typeof(bool)+"</h1>");
+
+        //Datas,maths and regular expressions are also an object.
+
+        var car={
+            name  : "audi",
+            color : "black",
+            price : 50000,
+
+            autoPilot : function(){
+                document.write("<h1>This car has auto pilot.</h1>");
+            }
+        }
+        car.autoPilot();
+
+        car.model = "model x3";//bahire theke akta object er maje attribute add korte parbo.
+        document.write("<h1>"+car.model+"</h1>");
+
+        car.newFn=function() //akta object er bahire theke amra oi object er jonno jekono method create korte parbo.
+        {
+            document.write("<h1>create new method for object car outsite the car object.</h1>");
+        }
+        car.newFn();
+
+        delete car.price;//delete any property in object.
+        document.write("<h1>"+car.price+"</h1>");//iha print kore undefine because oporer line e amra price ta delete kore dici.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

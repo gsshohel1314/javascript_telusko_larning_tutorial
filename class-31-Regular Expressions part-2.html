@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function vlidate()
+        {
+            var email=document.getElementById("mail").value;
+            regx= new RegExp/("diu.edu.bd")/;
+
+            if(regx.test(email)){
+                alert("valid Email");
+            }else{
+                document.getElementById("lab1").style.visibility="visible";
+                alert("invalid Email");
+                //return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return vlidate()" action="validate message.html">
+        <input type="email" placeholder="Email" id="mail"><br>
+        <label id="lab1" style="color: red; visibility:hidden;" >Invalid Email</label>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function vlidate()
+        {
+            var username=document.getElementById("uname").value;
+            var regx=/E00/;
+
+            if(regx.test(username)){
+                alert("valid username");
+            }else{
+                document.getElementById("lab1").style.visibility="visible";
+                alert("invalid username");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Username" id="uname"><br>
+        <label id="lab1" style="color: red; visibility:hidden;" >Invalid Username</label>
+        <br><br>
+        <button onclick="vlidate()" type="button">Submit</button>
+    </form>
+</body>
+</html>

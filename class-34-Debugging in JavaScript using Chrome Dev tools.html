@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+    document.write("developer tools niye discuse kora hoyece");
+    function addValue(){
+        var a=document.getElementById("tx1").value;
+        var b=document.getElementById("tx2").value;
+
+        document.getElementById("result").innerHTML="Result is: "+(a+b);
+
+        //console.log(a+b);
+        
+    }
+    
+    </script>
+</head>
+<body>
+    <br><br>
+    <input type="text" placeholder="TEXT1" id="tx1"><br><br>
+    <input type="text" placeholder="TEXT2" id="tx2"><br><br>
+    <button onclick="addValue()" type="submit">RESULT</button><br><br>
+    <h1 id="result">result</h1>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        var id=0;
+        function printMess(){
+            document.getElementById("op").innerHTML="5 seconds hava passed";
+        }
+
+        function start(){
+            id=window.setTimeout(printMess,5000);
+        }
+
+        function stop(){
+            window.clearTimeout(id);
+        }
+
+
+        var id1=0;
+        var second=0;
+        function showMess(){
+            document.getElementById("shohel").innerHTML=second+" seconds";
+            second++;
+        }
+
+        function go(){
+            id1=window.setInterval(showMess,1000);
+        }
+
+        function wait(){
+            window.clearInterval(id1);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="start()" type="button">Start</button>
+    <h2 id="op">Some text</h2>
+    <button onclick="stop()" type="button">Stop</button>
+
+    <br><br><br><br><br>
+
+    <button onclick="go()" type="button">Start</button>
+    <h2 id="shohel">Some text</h2>
+    <button onclick="wait()" type="button">Stop</button>
+</body>
+</html>

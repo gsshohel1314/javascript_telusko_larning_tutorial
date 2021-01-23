@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        opacity=0;
+        interval=0;
+
+        function hide(){
+            var img=document.getElementById("img1");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            
+            if(opacity>0){
+                opacity=opacity-0.1;
+                img.style.opacity=opacity;
+            }
+            else{
+                clearInterval(interval);
+            }
+        }
+
+        function show(){
+            var img=document.getElementById("img1");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            
+            if(opacity<1){
+                opacity=opacity+0.1;
+                img.style.opacity=opacity;
+            }
+            else{
+                clearInterval(interval);
+            }
+        }
+
+        function fadeOut(){
+            interval=setInterval(hide,20);
+        }
+
+        function fadeIn(){
+            interval=setInterval(show,20);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fadeOut()" type="button">Fade Out</button><br><br>
+    <img id="img1" src="images/IMG_4314.JPG" width="250px"><br><br>
+    <button onclick="fadeIn()" type="button">Fade In</button>
+</body>
+</html>

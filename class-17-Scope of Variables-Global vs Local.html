@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        /*in javascript there are two type of scope of variables.Global and Local variables.it is depending
+        upon where we create that variables.
+        Global variable=>jeta script tag er maje use kora hoy.
+        Local variable=>jeta kono function er maje use kora hoy.
+        Note:Global variable function er maje/localy use kora jabe but local variable kokhonoi 
+        fuction er bahire/globaly use kora jabena*/
+
+        var a=20;//Global variable
+        var c=100;//Global variable
+        document.write("<h1>"+a+"</h1>"); 
+        
+        function myFunction(){
+            var b="shohel rana";//Local variable.
+            document.write("<h1>"+b+"<h1>");
+            document.write("<h1>"+c+"<h1>");//c is global but use locally
+        }
+        myFunction();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
